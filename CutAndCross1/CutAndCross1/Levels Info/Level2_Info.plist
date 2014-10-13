@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Name</key>
+	<string>Level 2</string>
+	<key>Max Point</key>
+	<integer>2</integer>
+	<key>Points</key>
+	<array>
+		<dict>
+			<key>Tag</key>
+			<integer>1</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>1</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<integer>0</integer>
+				<key>Y</key>
+				<integer>0</integer>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>2</integer>
+				<integer>6</integer>
+				<integer>7</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>3</integer>
+				<integer>11</integer>
+				<integer>13</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>2</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>1</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<real>0.5</real>
+				<key>Y</key>
+				<integer>0</integer>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>1</integer>
+				<integer>3</integer>
+				<integer>7</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>4</integer>
+				<integer>12</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>3</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>1</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<integer>1</integer>
+				<key>Y</key>
+				<integer>0</integer>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>2</integer>
+				<integer>4</integer>
+				<integer>7</integer>
+				<integer>8</integer>
+				<integer>9</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>1</integer>
+				<integer>5</integer>
+				<integer>11</integer>
+				<integer>13</integer>
+				<integer>15</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>4</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>1</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<real>1.5</real>
+				<key>Y</key>
+				<integer>0</integer>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>3</integer>
+				<integer>5</integer>
+				<integer>9</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>2</integer>
+				<integer>14</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>5</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>1</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<real>2</real>
+				<key>Y</key>
+				<integer>0</integer>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>4</integer>
+				<integer>9</integer>
+				<integer>10</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>3</integer>
+				<integer>13</integer>
+				<integer>15</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>6</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>1</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<integer>0</integer>
+				<key>Y</key>
+				<real>0.5</real>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>1</integer>
+				<integer>7</integer>
+				<integer>11</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>8</integer>
+				<integer>16</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>7</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>1</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<real>0.5</real>
+				<key>Y</key>
+				<real>0.5</real>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>3</integer>
+				<integer>6</integer>
+				<integer>8</integer>
+				<integer>11</integer>
+				<integer>12</integer>
+				<integer>13</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>9</integer>
+				<integer>17</integer>
+				<integer>19</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>8</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>1</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<integer>1</integer>
+				<key>Y</key>
+				<real>0.5</real>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>3</integer>
+				<integer>7</integer>
+				<integer>9</integer>
+				<integer>13</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>6</integer>
+				<integer>10</integer>
+				<integer>18</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>9</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>1</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<real>1.5</real>
+				<key>Y</key>
+				<real>0.5</real>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>3</integer>
+				<integer>4</integer>
+				<integer>5</integer>
+				<integer>8</integer>
+				<integer>10</integer>
+				<integer>13</integer>
+				<integer>14</integer>
+				<integer>15</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>7</integer>
+				<integer>17</integer>
+				<integer>19</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>10</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>1</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<real>2</real>
+				<key>Y</key>
+				<real>0.5</real>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>5</integer>
+				<integer>9</integer>
+				<integer>15</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>8</integer>
+				<integer>20</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>11</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>1</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<integer>0</integer>
+				<key>Y</key>
+				<real>1</real>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>6</integer>
+				<integer>7</integer>
+				<integer>12</integer>
+				<integer>16</integer>
+				<integer>17</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>1</integer>
+				<integer>3</integer>
+				<integer>13</integer>
+				<integer>21</integer>
+				<integer>23</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>12</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>1</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<real>0.5</real>
+				<key>Y</key>
+				<integer>1</integer>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>7</integer>
+				<integer>11</integer>
+				<integer>13</integer>
+				<integer>17</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>2</integer>
+				<integer>14</integer>
+				<integer>22</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>13</integer>
+			<key>Is Occupied</key>
+			<false/>
+			<key>Occupied Type</key>
+			<integer>0</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<real>1</real>
+				<key>Y</key>
+				<real>1</real>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>7</integer>
+				<integer>8</integer>
+				<integer>9</integer>
+				<integer>12</integer>
+				<integer>14</integer>
+				<integer>17</integer>
+				<integer>18</integer>
+				<integer>19</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>1</integer>
+				<integer>3</integer>
+				<integer>5</integer>
+				<integer>11</integer>
+				<integer>15</integer>
+				<integer>21</integer>
+				<string>23</string>
+				<string>25</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>14</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>2</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<real>1.5</real>
+				<key>Y</key>
+				<real>1</real>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>9</integer>
+				<integer>13</integer>
+				<integer>15</integer>
+				<integer>19</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>4</integer>
+				<integer>12</integer>
+				<integer>24</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>15</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>2</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<real>2</real>
+				<key>Y</key>
+				<real>1</real>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>9</integer>
+				<integer>10</integer>
+				<integer>14</integer>
+				<integer>19</integer>
+				<string>20</string>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>3</integer>
+				<integer>5</integer>
+				<integer>13</integer>
+				<integer>23</integer>
+				<integer>25</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>16</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>2</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<integer>0</integer>
+				<key>Y</key>
+				<real>1.5</real>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>11</integer>
+				<integer>17</integer>
+				<integer>21</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>6</integer>
+				<integer>18</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>17</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>2</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<real>0.5</real>
+				<key>Y</key>
+				<real>1.5</real>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>11</integer>
+				<integer>12</integer>
+				<integer>13</integer>
+				<integer>16</integer>
+				<integer>18</integer>
+				<integer>21</integer>
+				<integer>22</integer>
+				<integer>23</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>7</integer>
+				<integer>9</integer>
+				<integer>19</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>18</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>2</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<real>1</real>
+				<key>Y</key>
+				<real>1.5</real>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>13</integer>
+				<integer>17</integer>
+				<integer>19</integer>
+				<integer>23</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>8</integer>
+				<integer>16</integer>
+				<integer>20</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>19</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>2</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<real>1.5</real>
+				<key>Y</key>
+				<real>1.5</real>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>13</integer>
+				<integer>14</integer>
+				<integer>15</integer>
+				<integer>18</integer>
+				<integer>20</integer>
+				<integer>23</integer>
+				<integer>24</integer>
+				<integer>25</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>7</integer>
+				<integer>9</integer>
+				<integer>17</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>20</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>2</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<integer>2</integer>
+				<key>Y</key>
+				<real>1.5</real>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>15</integer>
+				<integer>19</integer>
+				<integer>25</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>10</integer>
+				<integer>18</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>21</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>2</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<integer>0</integer>
+				<key>Y</key>
+				<real>2</real>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>16</integer>
+				<integer>17</integer>
+				<integer>22</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>16</integer>
+				<integer>18</integer>
+				<integer>23</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>22</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>2</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<real>0.5</real>
+				<key>Y</key>
+				<real>2</real>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>17</integer>
+				<integer>21</integer>
+				<integer>23</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>12</integer>
+				<integer>24</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>23</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>2</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<real>1</real>
+				<key>Y</key>
+				<real>2</real>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>17</integer>
+				<integer>18</integer>
+				<integer>19</integer>
+				<integer>22</integer>
+				<integer>24</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>11</integer>
+				<integer>13</integer>
+				<integer>15</integer>
+				<integer>21</integer>
+				<integer>25</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>24</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>2</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<real>1.5</real>
+				<key>Y</key>
+				<real>2</real>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>19</integer>
+				<integer>23</integer>
+				<integer>25</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>14</integer>
+				<integer>22</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Tag</key>
+			<integer>25</integer>
+			<key>Is Occupied</key>
+			<true/>
+			<key>Occupied Type</key>
+			<integer>2</integer>
+			<key>Coordinate</key>
+			<dict>
+				<key>X</key>
+				<integer>2</integer>
+				<key>Y</key>
+				<real>2</real>
+			</dict>
+			<key>Possible Movements</key>
+			<array>
+				<integer>19</integer>
+				<integer>20</integer>
+				<integer>24</integer>
+			</array>
+			<key>Possible Crosses</key>
+			<array>
+				<integer>13</integer>
+				<integer>15</integer>
+				<integer>23</integer>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -19,8 +19,8 @@ extern NSString const *USER_GAMECENTERAUTHENTICATION_CHANGED;;
     
     BOOL matchStarted;
     
-    GKInvite *pendingInvite;
-    NSArray *pendingPlayersToInvite;
+//    GKInvite *pendingInvite;
+//    NSArray *pendingPlayersToInvite;
 }
 
 @property (nonatomic, readonly) BOOL isUserAuthenticated;;

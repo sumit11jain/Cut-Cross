@@ -102,6 +102,7 @@ static GameCenterHelper *gchelperSingObj = nil;
     
     GKMatchmakerViewController *matchMakerVc = [[GKMatchmakerViewController alloc] initWithMatchRequest:matchRequest];  // Initialize with a matchmaking request, allowing the user to send invites and/or start matchmaking
     [matchMakerVc setDelegate:self];
+    [matchMakerVc setMatchmakerDelegate:self];
     
     [_presentViewController presentViewController:matchMakerVc animated:YES completion:NULL];
 }
@@ -111,6 +112,8 @@ static GameCenterHelper *gchelperSingObj = nil;
 // The user has cancelled matchmaking
 - (void)matchmakerViewControllerWasCancelled:(GKMatchmakerViewController *)viewController {
     [_presentViewController dismissViewControllerAnimated:YES completion:NULL];
+    
+    [self.gcDelegate matchEnded];
 }
 
 // Matchmaking has failed with an error
@@ -136,7 +139,7 @@ static GameCenterHelper *gchelperSingObj = nil;
 }
 
 //- (void)matchmakerViewController:(GKMatchmakerViewController *)viewController didReceiveAcceptFromHostedPlayer:(NSString *)playerID {
-//    
+//    NSLog(@"%@", NSStringFromSelector(_cmd));
 //}
 
 #pragma mark - GKMatchDelegate

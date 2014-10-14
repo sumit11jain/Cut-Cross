@@ -213,7 +213,7 @@
                                 self.currentGameState = GameStateMovingPiece;   //change game state
 
                                 if (selectedPoint.playerType == self.gamePlayerType) {
-                                    [delegate sendMoveFromTag:selectedPieceTag toTag:pp.tag];
+                                    [delegate sendMoveFromTag:selectedPieceTag toTag:pp.pointTag];
                                 }
                                 
                                 [selectedPiece moveFromPiecePoint:selectedPoint ToPiecePoint:pp inSteps:1]; //to move piece from one position to another
@@ -225,7 +225,7 @@
                             }
                         }
                     }
-                    if ([[selectedPoint possibleCrosses] containsObject:[NSNumber numberWithInteger:pp.pointTag]]) {    //check for crossing and cutting
+                    if ([[selectedPoint possibleCrosses] containsObject:[NSNumber numberWithUnsignedInteger:pp.pointTag]]) {    //check for crossing and cutting
                         if (selectedPiece) {
                             if (pp.playerType == PlayerTypeNone) {  //if the point doesn't contain any player than only it will move
                                 NSUInteger cutPointTag = (pp.pointTag+selectedPoint.pointTag)/2;
@@ -235,7 +235,7 @@
                                         self.currentGameState = GameStateMovingPiece;   //change game state
                                         
                                         if (selectedPoint.playerType == self.gamePlayerType) {
-                                            [delegate sendMoveFromTag:selectedPieceTag toTag:pp.tag];
+                                            [delegate sendMoveFromTag:selectedPieceTag toTag:pp.pointTag];
                                         }
                                         
                                         [selectedPiece moveFromPiecePoint:selectedPoint ToPiecePoint:pp inSteps:2];

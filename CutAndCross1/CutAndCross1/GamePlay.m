@@ -15,6 +15,8 @@
     
     IBOutlet UILabel *gameStatusLabel;
     
+    IBOutlet UILabel *turnLabel;
+    
     IBOutlet UILabel *whiteUserNameLabel;
     IBOutlet UILabel *blackUserNameLabel;
     
@@ -29,6 +31,9 @@
 }
 
 @property (nonatomic, readwrite) NewGameState gameState;
+@property (nonatomic, readwrite) BOOL yourTurn;
+
+- (IBAction)dismissGameButtonPressed:(id)sender;
 
 @end
 
@@ -47,9 +52,26 @@
     gameBoard = nil;
 }
 
+- (IBAction)dismissGameButtonPressed:(id)sender {
+//    [[SharedGameCenterHelper currentMatch] disconnect];
+    [self matchEnded];
+}
+
+- (void)setYourTurn:(BOOL)yourTurn {
+    _yourTurn = yourTurn;
+    if (yourTurn) {
+        [turnLabel setText:@"YOUR TURN"];
+    } else {
+        GKPlayer *otherPlayer = [[SharedGameCenterHelper playersInfoDictionary] objectForKey:otherPlayerId];
+
+        [turnLabel setText:[NSString stringWithFormat:@"%@'s TURN", [otherPlayer alias]]];
+    }
+}
+
 - (void)viewDidLoad
 {
     receivedRandom = NO;
+    _yourTurn = NO;
     selfPlayerType = PlayerTypeNone;
 
     ourRandom = arc4random();
@@ -92,6 +114,7 @@
 }
 
 - (void)sendRandomNumber {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
     MessageRandomNumber randNomessage;
     randNomessage.message.messageType = kMessageTypeRandomNumber;
     randNomessage.randomNumber = ourRandom;
@@ -101,13 +124,18 @@
 }
 
 - (void)sendGameBegin {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
     MessageGameBegin beginmessage;
     beginmessage.message.messageType = kMessageTypeGameBegin;
     NSData *data = [NSData dataWithBytes:&beginmessage length:sizeof(MessageGameBegin)];
     [self sendData:data];
+    
+    [self getGameBoard];
+
 }
 
 - (void)sendMoveMessageFromTag:(NSUInteger)fromTag toTag:(NSUInteger)toTag {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
     MessageMove sendMoveMessage;
     sendMoveMessage.message.messageType = kMessageTypeMove;
     sendMoveMessage.fromTag = [[NSNumber numberWithInteger:fromTag] unsignedIntValue];
@@ -118,6 +146,7 @@
 }
 
 - (void)sendGameOverMessageWithRemainingPieces:(NSUInteger)remaingPieces {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
     MessageGameOver gameOverMessage;
     gameOverMessage.message.messageType = kMessageTypeGameOver;
     gameOverMessage.player = selfPlayerType;
@@ -130,6 +159,7 @@
 #pragma mark - GameBoard Delegates
 - (void)sendMoveFromTag:(NSUInteger)fromTag toTag:(NSUInteger)toTag {
     [self sendMoveMessageFromTag:fromTag toTag:toTag];
+    [self setYourTurn:NO];
 }
 
 - (void)remainingBlackPiece:(NSUInteger)blackPoints andWhitePiece:(NSUInteger)whitePoints {
@@ -203,11 +233,17 @@
             } else if (ourRandom > messageInit->randomNumber) {
                 NSLog(@"We are white players");
                 selfPlayerType = PlayerTypeWhite;
-//                isPlayer1 = YES;
+                
+                self.yourTurn = YES;
+                
+                [Utilities showAlertWithTitle:@"White" andMessage:@"You have white pieces. First turn belongs to you"];
             } else {
                 NSLog(@"We are black players");
                 selfPlayerType = PlayerTypeBlack;
-//                isPlayer1 = NO;
+
+                self.yourTurn = NO;
+                
+                [Utilities showAlertWithTitle:@"Black" andMessage:@"You have black pieces. First turn belongs to opponent"];
             }
             
             if (!tie) {
@@ -224,12 +260,23 @@
         {
             [self setUpPlayerNames];
             [self setGameState:kNewGameStateActive];
+            [self getGameBoard];
+            if (selfPlayerType == PlayerTypeWhite)
+            {
+                self.yourTurn = YES;
+            }
+            else
+            {
+                self.yourTurn = NO;
+            }
+
         }
             break;
             
         case kMessageTypeMove:
         {
             [gameBoard moveOpponentWithMoveMessage:(MessageMove *)message];
+            [self setYourTurn:YES];
         }
             
             break;

@@ -15,8 +15,8 @@
 {
     [application setStatusBarHidden:YES];
     
-    [SharedGameCenterHelper authenticateDeviceUser];
-        
+//    [SharedGameCenterHelper authenticateDeviceUser];
+    
     // Override point for customization after application launch.
     return YES;
 }

@@ -26,12 +26,18 @@ extern NSString * USER_GAMECENTERAUTHENTICATION_CHANGED;;
 
 - (void)userAuthenticationChanged {
     if (![SharedGameCenterHelper isUserAuthenticated]) {
-        [Utilities showAlertWithTitle:@"Game Center Authentication Error" andMessage:@"User is not authenticated to game center"];
+//        [Utilities showAlertWithTitle:@"Game Center Authentication Error" andMessage:@"User is not authenticated to game center"];
+        [SharedGameCenterHelper authenticateDeviceUser];
         [[self navigationController] popToRootViewControllerAnimated:YES];
     }
     
     [(UITableView*)[self.view viewWithTag:1010] reloadData];
 }
+
+//- (void)viewDidAppear:(BOOL)animated {
+//    [super viewDidAppear:animated];
+//    [self userAuthenticationChanged];
+//}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

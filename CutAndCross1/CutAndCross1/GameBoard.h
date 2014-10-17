@@ -10,10 +10,10 @@
 #import "PiecePoint.h"
 #import "Piece.h"
 
-#define LeftMarginOfBoard   5.0
-#define RightMarginOfBoard  5.0
-#define TopMarginOfBoard    5.0
-#define BottomMarginOfBoard 5.0
+#define LeftMarginOfBoard   16.0
+#define RightMarginOfBoard  16.0
+#define TopMarginOfBoard    16.0
+#define BottomMarginOfBoard 16.0
 
 @protocol GameBoardDelegate;
 
@@ -25,6 +25,8 @@
 @property (nonatomic, readonly) PlayerType gamePlayerType;
 
 - (void)moveOpponentWithMoveMessage:(MessageMove*)move;
+
+- (void)rotateToDown;
 
 @end
 

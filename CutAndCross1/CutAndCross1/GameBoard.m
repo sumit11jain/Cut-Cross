@@ -39,6 +39,17 @@
     return self;
 }
 
+- (void)rotateToDown {
+    [self setTransform:CGAffineTransformMakeRotation(M_PI)];
+    
+    for (Piece *piece in [self subviews]) {
+        if ([piece isKindOfClass:[Piece class]]) {
+            [piece setTransform:CGAffineTransformMakeRotation(M_PI)];
+        }
+    }
+//    self.transform = CGAffineTransformMakeScale(1.0, -1.0);
+}
+
 - (id)initWithDelegate:(id<GameBoardDelegate>)deleg andMaxCoordinatePoint:(NSInteger)respectivePoint inFrame:(CGRect)rect withPlayerType:(PlayerType)player {
     self = [super initWithFrame:rect];
     if (self) {

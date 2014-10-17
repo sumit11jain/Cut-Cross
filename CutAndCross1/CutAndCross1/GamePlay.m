@@ -310,10 +310,14 @@
 - (void)getGameBoard {
     gameBoard = nil;
     
-    gameBoard = [[GameBoard alloc] initWithDelegate:self andMaxCoordinatePoint:[[self.dictionary objectForKey:@"Max Point"] integerValue] inFrame:CGRectMake(10, 10, 300, 300) withPlayerType:selfPlayerType];
+    gameBoard = [[GameBoard alloc] initWithDelegate:self andMaxCoordinatePoint:[[self.dictionary objectForKey:@"Max Point"] integerValue] inFrame:CGRectMake(0, 0, 320, 320) withPlayerType:selfPlayerType];
     [gameBoard setBackgroundColor:[UIColor yellowColor]];
     [gameBoard setPoints:[self.dictionary objectForKey:@"Points"]];
     [self.view addSubview:gameBoard];
+    
+    if (selfPlayerType == PlayerTypeWhite) {
+        [gameBoard rotateToDown];
+    }
 }
 
 - (void)setGameState:(NewGameState)state {
